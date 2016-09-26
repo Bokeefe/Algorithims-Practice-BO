@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//Write a JavaScript program which prompts the user for a number and console.logs that number as a string with dashes (-) between each two odd digits. For example if the user types 0253697 the output should be “025-369-7”.
+
+		//First I need to make something that splits up all of the digits the user puts in into individual spots in an array.
+
+		//I need to make something that goes through the array and checks if the number at that point in the array is even or odd
+
+		//if it is odd and the next number in the array is odd I insert a "-" using .fil()
+
+
+var userInput = prompt("Please enter a long number.");
+//console.log(userInput);
+
+var numSplit = userInput.split("");//chops up the user input into an array with a number at each point
+console.log(numSplit);
+			
+
+			var i =0;
+
+			for (var i = 0; i < numSplit.length; i++) {
+				if (i % 2 === 1 && i + 1 %2 === 1) {
+					finalArr = numSplit[i].split("-");
+				} else {
+					finalArr = numSplit[i].push();//Uncaught TypeError: numSplit[i].push is not a function// WHY???
+				}
+			}		
+	
+var finalArr = numSplit.split("");//for some reason this doesn't work. I need to do it because otherwise it just adds up the number of items in the array rather than just printing the whole array.  This exact code works fine on line 21.
+
+console.log(finalArr);
+	</script>
+</body>
+</html>
