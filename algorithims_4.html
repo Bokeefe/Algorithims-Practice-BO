@@ -24,8 +24,8 @@ console.log(numSplit);// This is my control group to compare to
 var finalArr = [];
 			var i =0;
 			for (var i = 0; i < numSplit.length; i++) {
-				if (i % 2 === 0) { //     if (i % 2 === 0 && i + 1 % 2 === 0) { //did not work
-				finalArr.splice(i, 0, + "-"); //this splices in a and prints an index number, not what is asked for.
+				if (i % 2 === 1) { //     if (i % 2 === 0 && i + 1 % 2 === 0) { //did not work
+				finalArr.splice(i, 0, "-"); //this splices in a and prints an index number, not what is asked for.
 				} else {
 				finalArr.push(numSplit[i]);
 				}
