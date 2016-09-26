@@ -16,23 +16,22 @@
 
 
 var userInput = prompt("Please enter a long number.");
-//console.log(userInput);
+
 
 var numSplit = userInput.split("");//chops up the user input into an array with a number at each point
-console.log(numSplit);
+console.log(numSplit);// This is my control group to compare to
 			
-
+var finalArr = [];
 			var i =0;
-
 			for (var i = 0; i < numSplit.length; i++) {
-				if (i % 2 === 1 && i + 1 %2 === 1) {
-					finalArr = numSplit[i].split("-");
+				if (i % 2 === 0) { //     if (i % 2 === 0 && i + 1 % 2 === 0) { //did not work
+				finalArr.splice(i, 0, + "-"); //this splices in a and prints an index number, not what is asked for.
 				} else {
-					finalArr = numSplit[i].push();//Uncaught TypeError: numSplit[i].push is not a function// WHY???
+				finalArr.push(numSplit[i]);
 				}
 			}		
 	
-var finalArr = numSplit.split("");//for some reason this doesn't work. I need to do it because otherwise it just adds up the number of items in the array rather than just printing the whole array.  This exact code works fine on line 21.
+//var finalArr = numSplit.split("");//for some reason this doesn't work. I need to do it because otherwise it just adds up the number of items in the array rather than just printing the whole array.  This exact code works fine on line 21.
 
 console.log(finalArr);
 	</script>

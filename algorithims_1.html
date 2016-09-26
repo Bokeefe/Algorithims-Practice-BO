@@ -14,34 +14,37 @@
 	<script>
 
 //put in a variable
-//convert from string to aray
-//reverse letters
+//convert from string to array
+//reverse the array
 //convert from arr to string
-
-/*
-var hello = "Hello World";
-var arrHello= (hello.split(""));
-hello = arrHello.reverse();//<---still arrray
-	console.log(hello.join(""));
-*/
 
 var hello = "Hello World";
 
 var helloSplit = (hello.split(""));
 console.log(helloSplit);
+
 var redRum = [];
+
+redRum = helloSplit.reverse().join("");
 console.log(redRum);
 
-var i = 0;
 
-while (helloSplit>0) {
-	redRum += helloSplit.pop();
+
+/*
+this part is not working so hot
+
+
+var newTry = "Hello World";
+var newArr = [];
+
+i = 0;
+if(i = newTry.length; i > 0; i--) {
+	newArr = newTry.push(i);
 	}
-	console.log(redRum);
-
-
-
+console.log(newArr);
+*/
 	</script>
+}
 </body>
 </html>
 	</script>

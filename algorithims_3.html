@@ -23,12 +23,21 @@ By considering the terms in the Fibonacci sequence whose values do not exceed tw
 var arr = [];
 var sum = 0;
 var i = 0;
+var evenArr = [];
+
+
 for (i = 0; i <= 20; i++) {
 	if(i % 2 ===0) {
 		arr.push(i);
 	}
 }
- console.log(arr);
+for (i = 0; i <= 20; i++) {
+	if(i % 2 ===0) {
+		evenArr.push(i + (i + 1));
+	}
+}
+console.log(arr);
+ console.log(evenArr);
 
 
 
