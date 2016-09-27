@@ -32,7 +32,7 @@ while (!hasWon) {
 		if(userInput === "w") {
 			var westQuest =	prompt("You are in the west room. You may pick up the sheild. Pick up sheild? 'y' or 'n'...");
 				if(westQuest === "y"){
-					hasSheild === true;
+					hasSheild = true;
 					alert("you have the sheild.");
 				}
 		} else if (userInput === "n") {
@@ -40,13 +40,13 @@ while (!hasWon) {
 				var northRoom = prompt("You are in the room with the dragon but you have the sheild. you may go to 's' safety")
 				if (northRoom === "s") {
 					alert("you have won");
+					hasWon = true;
 				}
 			} else if (!hasSheild) {
 				alert("You are in danger without a sheild. Either go back to the middle room or die.")
 				var northNoSheild = ("which room do you wish to go to? middle, west, or north? Please enter either 'm', 'w', or  'n' ...")
 				if(northNoSheild = "m" || "n"){
 					alert("You dead! Burnt!");
-					break;
 				}
 			} 
 		} else if (userInput ==="k") { //kills the game.
