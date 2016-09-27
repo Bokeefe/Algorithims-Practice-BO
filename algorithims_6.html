@@ -7,7 +7,6 @@
 <body>
 	<script>
 		
-ll find your number in the minimum number of guesses?
 
 /*
 Write a short adventure game.
@@ -23,6 +22,41 @@ When they get past the dragon (“go north” in the north room while holding th
 If you are feeling adventurous, try adding even more rooms, items, and challenges to this game!
 */
 
+
+
+var hasSheild = false;
+var hasWon = false;
+alert("You are in a building with three rooms. The room to the north has a dragon but also the exit out to safety, the room to the west has a sheild. You are in the middle room. You can pass by the dragon if you grab the sheild first. You must be super brave!");
+while (!hasWon) {
+	var userInput = prompt("which room do you wish to go to? middle, west, or north? Please enter either 'm', 'w', or  'n' ...");
+		if(userInput === "w") {
+			var westQuest =	prompt("You are in the west room. You may pick up the sheild. Pick up sheild? 'y' or 'n'...");
+				if(westQuest === "y"){
+					hasSheild === true;
+					alert("you have the sheild.");
+				}
+		} else if (userInput === "n") {
+			if (hasSheild){
+				var northRoom = prompt("You are in the room with the dragon but you have the sheild. you may go to 's' safety")
+				if (northRoom === "s") {
+					alert("you have won");
+				}
+			} else if (!hasSheild) {
+				alert("You are in danger without a sheild. Either go back to the middle room or die.")
+				var northNoSheild = ("which room do you wish to go to? middle, west, or north? Please enter either 'm', 'w', or  'n' ...")
+				if(northNoSheild = "m" || "n"){
+					alert("You dead! Burnt!");
+					break;
+				}
+			} 
+		} else if (userInput ==="k") { //kills the game.
+			break;
+		}
+	}
+		
+
+			
 	</script>
+
 </body>
 </html>
