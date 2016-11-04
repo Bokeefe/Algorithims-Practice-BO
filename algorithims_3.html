@@ -18,30 +18,22 @@ By considering the terms in the Fibonacci sequence whose values do not exceed tw
 // IF the number in array is even print it in a new array
 // Add all those even values in the array together and print
 
-    var fibArr = [];
-    var fibEvenArr = [];
-function fibNatch(n) {
-    var a = 0;
-    var b = 1;
-    var f = 1;
-    for(var i = 2; i <= n; i++) {
-        f = a + b;
-        a = b;
-        b = f;
-        fibArr = i.push(f);
-        if (f % 2===0){
-        	fibEvenArr = fibArr.push(f);
+// 
+
+    arr = [1, 2];
+    for (var i = 1; arr[i] < 2000000; i ++) {
+        if ((arr[i] + arr[i-1]) < 2000000) {
+        arr.push(arr[i] + arr[i-1]);    
         }
     }
-};
-
-//1000001000000
-console.log(fibNatch(15));
-console.log(fibArr);
-console.log(fibEvenArr);
-
-
-
+     //console.log(arr);
+    var num = 0;
+    for (var i = 0; i < arr.length; i ++) {
+        if (arr[i] % 2 === 0) {
+            num = num + arr[i];
+            }
+        }
+    console.log(num);  //  1089154
 
 	</script>
 </body>
